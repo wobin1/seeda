@@ -1,0 +1,7 @@
+{
+  "name": "seeda",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
