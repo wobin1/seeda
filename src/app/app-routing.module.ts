@@ -8,8 +8,20 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'splash-screen',
     pathMatch: 'full'
+  },
+  {
+    path: 'alarts',
+    loadChildren: () => import('./alarts/alarts.module').then( m => m.AlartsPageModule)
+  },
+  {
+    path: 'splash-screen',
+    loadChildren: () => import('./splash-screen/splash-screen.module').then( m => m.SplashScreenPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
 ];
 

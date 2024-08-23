@@ -1,20 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="ion-padding content">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <!-- app heading -->
+  <div class="h-[64px] flex items-center gap-4 px-4 rounded-md text-gray-800 bg-gray-200">
+    <ion-avatar>
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <div class="flex flex-col items-start justify-center text-base text-start h-full">
+        <span class="font-bold text-xl">John B.</span>
+        <span class="font-normal text-base">{{currentDate | date}} </span>
+      </div>
   </div>
+  
+
+  <!-- app body alert section -->
+  <div class="h-[75vh] flex flex-col gap-6 items-center justify-center text-gray-800">
+    <div id="present-alert" class="h-[128px] w-[128px] rounded-full border-2 active:scale-95 border-gray-800 flex justify-center items-center">
+      <ion-icon name="power-outline" size="large" class="text-gray-800"></ion-icon>
+    </div>
+    
+    <span class="text-xl font-semibold">Raise Alarm</span>
+  </div>
+
+  <!-- confirm alarm pop up -->
+  <ion-alert
+    trigger="present-alert"
+    header="Do you want to trigger an ALARM?"
+    [buttons]="alertButtons"
+    (didDismiss)="setResult($event)"
+  ></ion-alert>
+
+
+  <!-- alarm sound toast -->
+
+
+
 </ion-content>
