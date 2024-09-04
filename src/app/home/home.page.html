@@ -1,7 +1,10 @@
 <ion-content class="ion-padding content">
-
+  <div routerLink="/login" class="w-full h-[64px] flex justify-end gap-2 items-center px-4 active:scale-95">
+    <span><ion-icon name="log-out-outline" size="large" class="text-red-400"></ion-icon></span>
+    <span class="text-xl">Logout</span>
+  </div>
   <!-- app heading -->
-  <div class="h-[64px] flex items-center gap-4 px-4 rounded-md text-gray-800 bg-gray-200">
+  <div class="h-[64px] flex items-center gap-4 px-4 rounded-md text-gray-800 ">
     <ion-avatar>
         <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
       </ion-avatar>
@@ -10,6 +13,9 @@
         <span class="font-normal text-base">{{currentDate | date}} </span>
       </div>
   </div>
+
+  <div class="divider border w-full"></div>
+
   
 
   <!-- app body alert section -->
@@ -18,7 +24,7 @@
       <ion-icon name="power-outline" size="large" class="text-gray-800"></ion-icon>
     </div>
     
-    <span class="text-xl font-semibold">Raise Alarm</span>
+    <span  class="text-xl font-semibold">Raise Alarm</span>
   </div>
 
   <!-- confirm alarm pop up -->
@@ -28,6 +34,9 @@
     [buttons]="alertButtons"
     (didDismiss)="setResult($event)"
   ></ion-alert>
+
+
+  <ion-loading [isOpen]="loading" message="Dismissing after 3 seconds..."></ion-loading>
 
 
   <!-- alarm sound toast -->

@@ -16,15 +16,18 @@
 <ion-footer>
     <ion-toolbar class="footer relative">
       <div class="h-[70vh] flex justify-between bg-gray-900 w-full relative">
-        <div class=" h-full w-full bg-white absolute top-0 left-0 rounded-t-[24px] border-2 ">
+        <div class=" h-full w-full bg-white absolute top-0 left-0 ">
           <!-- form -->
-           <div class="form py-[72px] flex flex-col gap-6 h-full px-6">
+           <div class="form py-[72px] flex flex-col gap-6 h-full px-4">
             <div class="">
               <input type="email" name="email" id="email" class="px-4 py-4 border-4 border-gray-200 rounded-md bg-transparent w-full" placeholder="Email">
              </div>
 
              <div class=" ">
-                <button class="bg-gray-900 text-white font-semibold text-center rounded-md py-4 px-3 w-full text-xl">Done</button>
+                <button (click)="signUp()" class="bg-gray-900 text-white font-semibold flex justify-center items-center rounded-md py-4 px-3 w-full text-xl">
+                  <span><ion-spinner name="lines-small" color="light"></ion-spinner></span>
+                  <!-- <span>Done</span> -->
+                </button>
              </div>
 
              <div class="mt-12">

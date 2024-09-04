@@ -1,0 +1,23 @@
+
+<ion-content>
+  <ion-router-outlet></ion-router-outlet>
+  </ion-content>
+
+  <!-- can't send voice if alarm is not yet raised -->
+  <ion-alert
+  [isOpen]="isAlertOpen"
+    header="Can't record voice note"
+    message="You can't record voice if you've not triggered an alarm."
+    [buttons]="alertButtons"
+  ></ion-alert>
+
+
+  <ion-footer>
+    <ion-toolbar class="footer">
+      <div class="px-4 flex justify-between w-full h-[64px] items-center">
+        <ion-icon routerLink="/home" name="home-outline" size="large" class="text-white hover:gray-300"></ion-icon>
+        <ion-icon (click)="recordVoiceNote()" name="mic-outline" size="large" class="text-white hover:gray-300"></ion-icon>
+        <ion-icon routerLink="/alarts" name="person-outline" size="large" class="text-white hover:gray-300"></ion-icon>
+      </div>
+    </ion-toolbar>
+  </ion-footer>

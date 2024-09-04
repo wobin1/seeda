@@ -14,26 +14,26 @@
 </ion-content>
 
 <ion-footer>
-    <ion-toolbar class="footer relative">
+    <ion-toolbar class="footer">
       <div class="h-[70vh] flex justify-between bg-gray-900 w-full relative">
-        <div class=" h-full w-full bg-white absolute top-0 left-0 rounded-t-[24px] ">
+        <div class=" h-full w-full bg-white absolute top-0 left-0 ">
           <!-- form -->
            <div class="form py-[72px] flex flex-col gap-6 h-full px-4">
             <div class="">
-              <input type="email" name="email" id="email" class="px-4 py-4 border-4 border-gray-200 rounded-md bg-transparent w-full" placeholder="Email">
+              <input type="email" name="email" id="email" class="px-4 py-4 border-4 text-xl border-gray-200 rounded-md bg-transparent w-full" placeholder="Email">
              </div>
 
              <div class="">
-              <input type="password" name="email" id="email" class="px-4 py-4 border-4 border-gray-200 rounded-md bg-transparent w-full" placeholder="password">
+              <input type="password" name="email" id="email" class="px-4 py-4 border-4 text-xl border-gray-200 rounded-md bg-transparent w-full" placeholder="password">
              </div>
 
              <div class=" ">
-                <button class="bg-gray-900 text-white font-semibold text-center rounded-md py-4 px-3 w-full text-xl">Done</button>
+                <button (click)="login()" class="bg-gray-900 text-white font-semibold text-center rounded-md py-4 px-3 w-full text-xl">Done</button>
                 <span class="w-full flex justify-end py-2 text-lg text-gray-900/75 font-bold">Forgot Password?</span>
              </div>
 
              <div class="mt-8">
-              <span class="text-lg text-gray-900/55">Don't have an account? <span class="text-gray-900/75 font-bold cursor-pointer" routerLink="/login">Contact us</span></span>
+              <span class="text-lg text-gray-900/55">Don't have an account? <span class="text-gray-900/75 font-bold cursor-pointer" routerLink="/sign-up">Sign up</span></span>
               </div>
            </div>
 

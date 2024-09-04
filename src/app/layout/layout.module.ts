@@ -4,19 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AlartsPageRoutingModule } from './alarts-routing.module';
+import { LayoutPageRoutingModule } from './layout-routing.module';
 
-import { AlartsPage } from './alarts.page';
-import { HttpClient,  } from '@angular/common/http';
-
+import { LayoutPage } from './layout.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AlartsPageRoutingModule,
+    LayoutPageRoutingModule
   ],
-  declarations: [AlartsPage]
+  declarations: [LayoutPage]
 })
-export class AlartsPageModule {}
+export class LayoutPageModule {}
