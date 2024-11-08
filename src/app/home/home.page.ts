@@ -23,17 +23,21 @@ export class HomePage {
               private help: HelperService
             ) {}
 
-  alertMessage!: string;
+  alertMessage!: any;
 
   ngOnInit() {
     this.sockets.getMessages().subscribe(message => {
         if (this.isJSON(message)) {
             const data = JSON.parse(message);
             this.alertMessage = data.message;
+            alert(this.alertMessage.message)
+
         } else {
             this.alertMessage = message;  // Handle as plain text
+            
+            alert(this.alertMessage.message)
+
         }
-        console.log('Alert message received:', this.alertMessage);
       });
   }
 

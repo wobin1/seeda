@@ -18,13 +18,13 @@
       <div class="h-[70vh] flex justify-between bg-gray-900 w-full relative">
         <div class=" h-full w-full bg-white absolute top-0 left-0 ">
           <!-- form -->
-           <div class="form py-[72px] flex flex-col gap-6 h-full px-4">
+           <div [formGroup]="loginForm" (ngSubmit)="login()" class="form py-[72px] flex flex-col gap-6 h-full px-4">
             <div class="">
-              <input type="email" name="email" id="email" class="px-4 py-4 border-4 text-xl border-gray-200 rounded-md bg-transparent w-full" placeholder="Email">
+              <input formControlName="email" type="email" name="email" id="email" class="px-4 py-4 border-4 text-xl border-gray-200 rounded-md bg-transparent w-full" placeholder="Email">
              </div>
 
              <div class="">
-              <input type="password" name="email" id="email" class="px-4 py-4 border-4 text-xl border-gray-200 rounded-md bg-transparent w-full" placeholder="password">
+              <input formControlName="password" type="password" name="email" id="email" class="px-4 py-4 border-4 text-xl border-gray-200 rounded-md bg-transparent w-full" placeholder="password">
              </div>
 
              <div class=" ">
